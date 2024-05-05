@@ -1,0 +1,32 @@
+# Directorios
+node_modules/
+dist/
+coverage/
+
+# Archivos
+.env
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Dependencias específicas de administradores de paquetes
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# Archivos generados en construcción
+/build
+
+# Entornos específicos de desarrollo
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
