@@ -50,7 +50,7 @@ export class ProjectController {
       await proyecto.save();
       res.json(proyecto);
     } catch (error) {
-      console.log(error);
+      console.log("error", error);
     }
   };
 
