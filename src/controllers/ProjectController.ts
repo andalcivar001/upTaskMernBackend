@@ -27,6 +27,13 @@ export class ProjectController {
 
   static createProjects = async (req: Request, res: Response) => {
     try {
+      const proyecto = await Project.find({
+        projectName: req.body.projectName,
+      });
+      if (proyecto && proyecto.length) {
+        const error = new Error("Nombre del proyecto ya existe!");
+        return res.status(500).json({ error: error.message });
+      }
       const project = new Project(req.body);
       //const project = await Project.create(req.body);
       await project.save();
